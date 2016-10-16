@@ -1,0 +1,9 @@
+Install Node + NPM
+Install create-react-app
+
+create-react-app nitflex
+
+cd nitflex
+npm start
+// The browser should appear at http://localhost:3000/ with a "Welcome to React" message and logo
+
