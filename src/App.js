@@ -32,9 +32,11 @@ class App extends Component {
   }
 
   render() {
+    const {user} = this.state;
+    
     return (
       <div className="container">
-        { this.state.user ? <MainPage/> : <LoginPage loginAsUser={this.loginAsUser} /> }
+        { this.state.user ? <MainPage user={user}/> : <LoginPage loginAsUser={this.loginAsUser} /> }
       </div>
     );
   }
