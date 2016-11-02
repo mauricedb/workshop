@@ -23,4 +23,8 @@
     1. Hovering over a title image makes it larger
     1. Clicking on the down arrow shows more info about the title
     1. Clicking on the play button starts the player in full screen
-
+1. We will use Bootstrap as our CSS framework
+    1. `npm install bootstrap --save`
+    1. Remove existing import of CSS file
+    1. Import Bootstrap CSS with `import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';`
