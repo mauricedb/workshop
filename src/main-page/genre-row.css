@@ -15,3 +15,16 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+
+
+.genre-row .genre-row-movie .expand {
+    transition: all 0.3s;
+    text-align: center;
+    opacity: 0;
+}
+
+.genre-row .genre-row-movie:hover .expand {
+    transition-delay: 0.3s;
+    opacity: 1;
+}

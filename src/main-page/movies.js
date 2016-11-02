@@ -3,13 +3,15 @@ import AjaxLoading from '../utils/ajax-loading';
 import JumboMovie from './jumbo-movie';
 import GenreList from './genre-list';
 
+// <JumboMovie movie={movies[0]} />
+
 export class MoviesPresentation extends Component {
   render() {
       const {movies} = this.props;
 
     return (
       <div>
-        <JumboMovie movie={movies[0]} />
+        
         <GenreList movies={movies} />
       </div>
     );

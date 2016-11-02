@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
 class GenreRowMovie extends Component {
+    constructor() {
+        super();
+
+        this.expandMovie = this.expandMovie.bind(this);
+    }
+
+    expandMovie() {
+        this.props.expandMovie(this.props.movie);
+    }
+
   render() {
       const {movie} = this.props;
 
@@ -12,6 +22,10 @@ class GenreRowMovie extends Component {
             <img className="img-responsive" 
                  title={movie.title} 
                  src={`http://image.tmdb.org/t/p/w300/${movie.backdrop_path}`}/>
+            <div className='expand'
+                 onClick={this.expandMovie}>
+                <i className='glyphicon glyphicon-chevron-down'/>
+            </div>
           </div>
           );
   }
