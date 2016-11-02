@@ -9,7 +9,9 @@ class GenreRowMovie extends Component {
             <div className="title">
                 {movie.title}
             </div>
-            <img className="img-responsive" title={movie.title} src={`http://image.tmdb.org/t/p/w300/${movie.backdrop_path}`}/>
+            <img className="img-responsive" 
+                 title={movie.title} 
+                 src={`http://image.tmdb.org/t/p/w300/${movie.backdrop_path}`}/>
           </div>
           );
   }

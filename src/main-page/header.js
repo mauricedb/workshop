@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-
 class Header extends Component {
   render() {
     const {user} = this.props;

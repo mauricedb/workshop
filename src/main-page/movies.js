@@ -36,7 +36,9 @@ export class MoviesContainer extends Component {
 
         return (
             <div>
-                { movies ? <MoviesPresentation movies={movies} /> :  <AjaxLoading />}
+                { movies ? 
+                    <MoviesPresentation movies={movies} /> :  
+                    <AjaxLoading />}
             </div>
         );
     }

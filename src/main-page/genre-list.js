@@ -19,7 +19,10 @@ class GenreList extends Component {
 
     return (
       <div>
-        {genres.map(genre => <GenreRow key={genre} genre={genre} movies={allGenres[genre]} />)}
+        {genres.map(genre => 
+            <GenreRow key={genre} 
+                      genre={genre} 
+                      movies={allGenres[genre]} />)}
       </div>
     );
   }

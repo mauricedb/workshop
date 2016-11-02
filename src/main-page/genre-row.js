@@ -10,7 +10,9 @@ class GenreRow extends Component {
       <div className="row genre-row">
         <h2>{genre}</h2>
         
-        {movies.slice(0, 6).map(movie => <GenreRowMovie key={movie.id} movie={movie} />)}
+        {movies.slice(0, 6).map(movie => 
+            <GenreRowMovie key={movie.id} 
+                           movie={movie} />)}
       </div>
     );
   }
