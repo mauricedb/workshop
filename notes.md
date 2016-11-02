@@ -36,5 +36,14 @@
     1. Remove existing import of CSS file
     1. Import Bootstrap CSS with `import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';`
+1. Create main layout in App.js. 
+    1. Render a wrapping div with class container
+    1. Add user property as state, default to null
+    1. Render LoginPage if user is null. Pass loginAsUser() function to LoginPage so it can alter the state.
+    1. Render MainPage is user is set
+1. Login in each time isn't very nice
+    1. Add "Remember me on this device"
+    1. Save user in `localStorage` if set
+    1. In `componentDidMount()` check `localStorage` for user and set if there. 
 
 
