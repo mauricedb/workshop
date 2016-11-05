@@ -3,8 +3,9 @@ import GenreRow from './genre-row';
 
 class GenreList extends Component {
   render() {
-      const {movies} = this.props;
+      const {movies, startPlaying} = this.props;
       const allGenres = {};
+
       movies.forEach(movie => {
           movie.genre.forEach(genre => {
               if (allGenres[genre]) {
@@ -22,7 +23,8 @@ class GenreList extends Component {
         {genres.map(genre => 
             <GenreRow key={genre} 
                       genre={genre} 
-                      movies={allGenres[genre]} />)}
+                      movies={allGenres[genre]} 
+                      startPlaying={startPlaying} />)}
       </div>
     );
   }

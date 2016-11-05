@@ -21,7 +21,7 @@ class GenreRow extends Component {
     }
 
   render() {
-      const {genre, movies} = this.props;
+      const {genre, movies, startPlaying} = this.props;
       const {expandedMovie} = this.state;
       // const expandedMovie = movies[0];
 
@@ -35,7 +35,7 @@ class GenreRow extends Component {
                            expandMovie={this.expandMovie} />)}
 
         { expandedMovie ? 
-          <ExpandedGenreRowMovie movie={expandedMovie}/> : 
+          <ExpandedGenreRowMovie movie={expandedMovie} startPlaying={startPlaying} /> : 
           <div/> }
       </div>
     );

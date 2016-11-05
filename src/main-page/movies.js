@@ -7,12 +7,12 @@ import GenreList from './genre-list';
 
 export class MoviesPresentation extends Component {
   render() {
-      const {movies} = this.props;
+      const {movies, startPlaying} = this.props;
 
     return (
       <div>
         
-        <GenreList movies={movies} />
+        <GenreList movies={movies} startPlaying={startPlaying}/>
       </div>
     );
   }
@@ -34,12 +34,13 @@ export class MoviesContainer extends Component {
     }
 
     render() {
+        const {startPlaying} = this.props;
         const {movies} = this.state;
 
         return (
             <div>
                 { movies ? 
-                    <MoviesPresentation movies={movies} /> :  
+                    <MoviesPresentation movies={movies} startPlaying={startPlaying} /> :  
                     <AjaxLoading />}
             </div>
         );

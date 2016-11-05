@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 
 
 class ExpandedGenreRowMovie extends Component {
+  constructor() {
+    super();
+
+    this.startPlaying = this.startPlaying.bind(this);
+  }
+
+  startPlaying() {
+    const {movie, startPlaying} = this.props;
+    startPlaying(movie);
+  }
+
   render() {
     const {movie} = this.props;
 
@@ -34,6 +45,7 @@ class ExpandedGenreRowMovie extends Component {
                     {movie.genre.join(', ')}
                 </span>
             </div>
+            <button onClick={this.startPlaying}>Play</button> 
         </div>
       </div>
     );
