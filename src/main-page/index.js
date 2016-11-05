@@ -14,10 +14,17 @@ class MainPage extends Component {
     this.startPlaying = this
       .startPlaying
       .bind(this);
+    this.stopPlaying = this
+      .stopPlaying
+      .bind(this);
   }
 
   startPlaying(movie) {
     this.setState({playing: movie});
+  }
+
+  stopPlaying() {
+    this.setState({playing: null});
   }
 
   render() {
@@ -27,7 +34,7 @@ class MainPage extends Component {
     return (
       <div>
         <Header user={user}/> {playing
-          ? <PlayingMovie movie={playing}/>
+          ? <PlayingMovie movie={playing} stopPlaying={this.stopPlaying}/>
           : <Movies startPlaying={this.startPlaying}/>}
       </div>
     );
