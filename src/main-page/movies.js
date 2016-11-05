@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import AjaxLoading from '../utils/ajax-loading';
 import JumboMovie from './jumbo-movie';
 import GenreList from './genre-list';
@@ -6,16 +6,16 @@ import GenreList from './genre-list';
 // <JumboMovie movie={movies[0]} />
 
 export class MoviesPresentation extends Component {
-  render() {
-      const {movies, startPlaying} = this.props;
+    render() {
+        const {movies, startPlaying} = this.props;
 
-    return (
-      <div>
-        
-        <GenreList movies={movies} startPlaying={startPlaying}/>
-      </div>
-    );
-  }
+        return (
+            <div>
+
+                <GenreList movies={movies} startPlaying={startPlaying}/>
+            </div>
+        );
+    }
 }
 
 export class MoviesContainer extends Component {
@@ -39,9 +39,9 @@ export class MoviesContainer extends Component {
 
         return (
             <div>
-                { movies ? 
-                    <MoviesPresentation movies={movies} startPlaying={startPlaying} /> :  
-                    <AjaxLoading />}
+                {movies
+                    ? <MoviesPresentation movies={movies} startPlaying={startPlaying}/>
+                    : <AjaxLoading/>}
             </div>
         );
     }

@@ -1,41 +1,39 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 
 class Header extends Component {
-  render() {
-    const {user} = this.props;
+    render() {
+        const {user} = this.props;
 
-    return (
-      <nav className="navbar navbar-default">
-        <div className="container-fluid">
-            <div className="navbar-header">
-                <a className="navbar-brand" href="/">
-                    Nitflex Movies
-                </a>
-            </div>
+        return (
+            <nav className="navbar navbar-default">
+                <div className="container-fluid">
+                    <div className="navbar-header">
+                        <a className="navbar-brand" href="/">
+                            Nitflex Movies
+                        </a>
+                    </div>
 
-            <div className="navbar-right">
-                <p className="navbar-text">
-                    {user.name}
-                </p>
-            </div>
-        </div>
-      </nav>
-    );
-  }
+                    <div className="navbar-right">
+                        <p className="navbar-text">
+                            {user.name}
+                        </p>
+                    </div>
+                </div>
+            </nav>
+        );
+    }
 }
 
 Header.propTypes = {
-    user: PropTypes.shape({
-        name: React.PropTypes.string
-    }).isRequired
+    user: PropTypes
+        .shape({name: React.PropTypes.string})
+        .isRequired
 
 }
 
 export default Header;
 
 
-
-        
             // <form className="navbar-form navbar-right">
             //     <div className="input-group">
             //         <input type="text" 

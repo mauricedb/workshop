@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import LoginPage from './login-page';
 import MainPage from './main-page';
 
@@ -10,7 +10,9 @@ class App extends Component {
       user: null
     };
 
-    this.loginAsUser = this.loginAsUser.bind(this);
+    this.loginAsUser = this
+      .loginAsUser
+      .bind(this);
   }
 
   loginAsUser(user) {
@@ -25,7 +27,7 @@ class App extends Component {
       try {
         const user = JSON.parse(localStorage.user);
         this.setState({user});
-      } catch(e) {
+      } catch (e) {
         console.error(e);
       }
     }
@@ -36,13 +38,12 @@ class App extends Component {
 
     return (
       <div className="container">
-        { this.state.user ? 
-          <MainPage user={user}/> : 
-          <LoginPage loginAsUser={this.loginAsUser} /> }
+        {this.state.user
+          ? <MainPage user={user}/>
+          : <LoginPage loginAsUser={this.loginAsUser}/>}
       </div>
     );
   }
 }
 
 export default App;
-

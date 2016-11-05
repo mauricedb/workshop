@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Header from './header';
 import Movies from './movies';
 import PlayingMovie from './playing-movie';
@@ -11,7 +11,9 @@ class MainPage extends Component {
       playing: null
     };
 
-    this.startPlaying = this.startPlaying.bind(this);
+    this.startPlaying = this
+      .startPlaying
+      .bind(this);
   }
 
   startPlaying(movie) {
@@ -24,15 +26,16 @@ class MainPage extends Component {
 
     return (
       <div>
-        <Header user={user}/>
-        {playing ? <PlayingMovie movie={playing} /> :<Movies startPlaying={this.startPlaying} />}
+        <Header user={user}/> {playing
+          ? <PlayingMovie movie={playing}/>
+          : <Movies startPlaying={this.startPlaying}/>}
       </div>
     );
   }
 }
 
 MainPage.propTypes = {
-    user: React.PropTypes.object.isRequired
+  user: React.PropTypes.object.isRequired
 }
 
 export default MainPage;
