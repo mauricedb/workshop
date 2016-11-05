@@ -8,7 +8,9 @@ class PlayingMovie extends Component {
         <div className="title">
           <h1>{movie.title}</h1>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/6hB3S9bIaco?autoplay=1" frameBorder="0" allowFullScreen></iframe>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/6hB3S9bIaco?autoplay=1" frameBorder="0" allowFullScreen className="video"></iframe>
+        </div>
         </div>
       </div>
     );
