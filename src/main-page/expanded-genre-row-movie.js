@@ -24,7 +24,7 @@ class ExpandedGenreRowMovie extends Component {
         <div className='col-sm-4' style={{
           paddingLeft: 0
         }}>
-          <img src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`}/>
+          <img src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={movie.title}/>
         </div>
         <div className='col-sm-8'>
           <h4 className='media-heading'>

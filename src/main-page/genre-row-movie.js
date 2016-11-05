@@ -25,7 +25,7 @@ class GenreRowMovie extends Component {
                 </div>
                 <img
                     className="img-responsive"
-                    title={movie.title}
+                    alt={movie.title}
                     src={`http://image.tmdb.org/t/p/w300/${movie.backdrop_path}`}/>
                 <div className='expand' onClick={this.expandMovie}>
                     <i className='glyphicon glyphicon-chevron-down'/>

@@ -10,7 +10,7 @@ class JumboMovie extends Component {
         </div>
         <img
           className="img-responsive"
-          title={movie.title}
+          alt={movie.title}
           src={`http://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}/>
       </div>
     );
