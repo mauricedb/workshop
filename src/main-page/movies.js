@@ -17,8 +17,8 @@ export class MoviesPresentation extends Component {
 }
 
 export class MoviesContainer extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             movies: null

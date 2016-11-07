@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 class GenreRowMovie extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.expandMovie = this
             .expandMovie
@@ -19,7 +19,7 @@ class GenreRowMovie extends Component {
         const {movie} = this.props;
 
         return (
-            <div className="col-sm-2 genre-row-movie ">
+            <div className="col-sm-2 genre-row-movie">
                 <div className="title">
                     {movie.title}
                 </div>

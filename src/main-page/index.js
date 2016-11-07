@@ -4,8 +4,8 @@ import Movies from './movies';
 import PlayingMovie from './playing-movie';
 
 class MainPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       playing: null

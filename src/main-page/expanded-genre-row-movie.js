@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 class ExpandedGenreRowMovie extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.startPlaying = this
       .startPlaying

@@ -4,6 +4,7 @@ import './playing-movie.css';
 class PlayingMovie extends Component {
   render() {
     const {movie, stopPlaying} = this.props;
+    
     return (
       <div className="row">
         <div className="title">

@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class JumboMovie extends Component {
   render() {
     const {movie} = this.props;
+    
     return (
       <div className="row">
         <div className="title">

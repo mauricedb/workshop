@@ -4,8 +4,8 @@ import ExpandedGenreRowMovie from './expanded-genre-row-movie';
 import './genre-row.css';
 
 class GenreRow extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       expandedMovie: null
@@ -17,14 +17,12 @@ class GenreRow extends Component {
   }
 
   expandMovie(movie) {
-    // console.log('expanding', movie);
     this.setState({expandedMovie: movie});
   }
 
   render() {
     const {genre, movies, startPlaying} = this.props;
     const {expandedMovie} = this.state;
-    // const expandedMovie = movies[0];
 
     return (
       <div className="row genre-row">
