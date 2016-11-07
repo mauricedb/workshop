@@ -33,7 +33,8 @@ class MainPage extends Component {
 
     return (
       <div>
-        <Header user={user}/> {playing
+        <Header user={user}/> 
+        {playing
           ? <PlayingMovie movie={playing} stopPlaying={this.stopPlaying}/>
           : <Movies startPlaying={this.startPlaying}/>}
       </div>
