@@ -91,3 +91,11 @@ import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';```
 1. Add a `` with `` component
 1. Add a `` with `` component
 
+
+1. Add support for ESLint
+npm i eslint-config-airbnb --save
+eslint, eslint-plugin-import, eslint-plugin-react, and eslint-plugin-jsx-a11y
+create  .eslintrc
+    "extends": "airbnb"
+Open package.json
+    Add `"eslint": "eslint ./src/**/*.js"` to the `scripts` section
