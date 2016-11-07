@@ -1,9 +1,9 @@
 import React from 'react';
-import './ajax-loading.css'
+import './ajax-loading.css';
 
 const AjaxLoading = () => (
-    <div>
-        <i className="glyphicon glyphicon-refresh spinning"/>
+  <div>
+    <i className="glyphicon glyphicon-refresh spinning" />
         &nbsp;Loading...
     </div>
 );

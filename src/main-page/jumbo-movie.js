@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class JumboMovie extends Component {
   render() {
-    const {movie} = this.props;
-    
+    const { movie } = this.props;
+
     return (
       <div className="row">
         <div className="title">
@@ -12,10 +12,15 @@ class JumboMovie extends Component {
         <img
           className="img-responsive"
           alt={movie.title}
-          src={`http://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}/>
+          src={`http://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
+        />
       </div>
     );
   }
 }
+
+JumboMovie.propTypes = {
+  movie: PropTypes.object.isRequired,
+};
 
 export default JumboMovie;

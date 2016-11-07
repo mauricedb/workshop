@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Header from './header';
 import Movies from './movies';
 import PlayingMovie from './playing-movie';
@@ -8,7 +8,7 @@ class MainPage extends Component {
     super(props);
 
     this.state = {
-      playing: null
+      playing: null,
     };
 
     this.startPlaying = this
@@ -20,30 +20,30 @@ class MainPage extends Component {
   }
 
   startPlaying(movie) {
-    this.setState({playing: movie});
+    this.setState({ playing: movie });
   }
 
   stopPlaying() {
-    this.setState({playing: null});
+    this.setState({ playing: null });
   }
 
   render() {
-    const {user} = this.props;
-    const {playing} = this.state;
+    const { user } = this.props;
+    const { playing } = this.state;
 
     return (
       <div>
-        <Header user={user}/> 
+        <Header user={user} />
         {playing
-          ? <PlayingMovie movie={playing} stopPlaying={this.stopPlaying}/>
-          : <Movies startPlaying={this.startPlaying}/>}
+          ? <PlayingMovie movie={playing} stopPlaying={this.stopPlaying} />
+          : <Movies startPlaying={this.startPlaying} />}
       </div>
     );
   }
 }
 
 MainPage.propTypes = {
-  user: React.PropTypes.object.isRequired
-}
+  user: React.PropTypes.object.isRequired,
+};
 
 export default MainPage;

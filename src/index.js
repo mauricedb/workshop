@@ -5,4 +5,4 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';
 
 ReactDOM.render(
-  <App/>, document.getElementById('root'));
+  <App />, document.getElementById('root'));

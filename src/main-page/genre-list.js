@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component, PropTypes } from 'react';
 import GenreRow from './genre-row';
 
 class GenreList extends Component {
   render() {
-    const {movies, startPlaying} = this.props;
+    const { movies, startPlaying } = this.props;
     const allGenres = {};
 
-    movies.forEach(movie => {
+    movies.forEach((movie) => {
       movie
         .genre
-        .forEach(genre => {
+        .forEach((genre) => {
           if (allGenres[genre]) {
             allGenres[genre].push(movie);
           } else {
             allGenres[genre] = [movie];
           }
-        })
+        });
     });
 
     const genres = Object
@@ -28,10 +28,16 @@ class GenreList extends Component {
           key={genre}
           genre={genre}
           movies={allGenres[genre]}
-          startPlaying={startPlaying}/>)}
+          startPlaying={startPlaying}
+        />)}
       </div>
     );
   }
 }
+
+GenreList.propTypes = {
+  movies: PropTypes.array.isRequired,
+  startPlaying: PropTypes.func.isRequired,
+};
 
 export default GenreList;
