@@ -9,9 +9,9 @@ class PlayingMovie extends Component {
       <div className="row">
         <div className="title">
           <h1>{movie.title}
-            <span className="pull-right" onClick={stopPlaying}>
+            <button className="btn btn-link pull-right" onClick={stopPlaying}>
               <i className="glyphicon glyphicon-remove" />
-            </span>
+            </button>
           </h1>
 
           <iframe

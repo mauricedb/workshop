@@ -34,9 +34,7 @@
 1. We will use Bootstrap as our CSS framework
     1. `npm install bootstrap --save`
     1. Remove existing import of CSS file
-    1. Import Bootstrap CSS with ```
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';```
+    1. Import Bootstrap CSS with ```import '../node_modules/bootstrap/dist/css/bootstrap.min.css';```
 1. Create main layout in App.js. 
     1. Render a wrapping div with class container
     1. Add user property as state, default to null

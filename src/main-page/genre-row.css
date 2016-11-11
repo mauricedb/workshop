@@ -28,3 +28,7 @@
     transition-delay: 0.3s;
     opacity: 1;
 }
+
+.genre-row .genre-row-movie .btn:focus {
+  outline-style: none !important;
+}

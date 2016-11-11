@@ -58,7 +58,9 @@ class ExpandedGenreRowMovie extends Component {
                 .join(', ')}
             </span>
           </div>
-          <i className="glyphicon glyphicon-play-circle" onClick={this.startPlaying} />
+          <button className="btn btn-default btn-lg" onClick={this.startPlaying}>
+            <i className="glyphicon glyphicon-play-circle" />
+          </button>
         </div>
       </div>
     );

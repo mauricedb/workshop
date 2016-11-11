@@ -28,9 +28,9 @@ class GenreRowMovie extends Component {
           alt={movie.title}
           src={`http://image.tmdb.org/t/p/w300/${movie.backdrop_path}`}
         />
-        <div className="expand" onClick={this.expandMovie}>
+        <button className="btn btn-link btn-block expand" onClick={this.expandMovie}>
           <i className="glyphicon glyphicon-chevron-down" />
-        </div>
+        </button>
       </div>
     );
   }
