@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import AjaxLoading from '../utils/ajax-loading';
-import JumboMovie from './jumbo-movie';
+import Billboard from './billboard';
 import GenreList from './genre-list';
 
 export class MoviesPresentation extends Component {
@@ -9,7 +9,7 @@ export class MoviesPresentation extends Component {
 
     return (
       <div>
-        <JumboMovie movie={movies[0]} />
+        <Billboard movie={movies[0]} />
         <GenreList movies={movies} startPlaying={startPlaying} />
       </div>
     );

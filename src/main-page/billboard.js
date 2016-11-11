@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-class JumboMovie extends Component {
+class Billboard extends Component {
   render() {
     const { movie } = this.props;
 
@@ -19,8 +19,8 @@ class JumboMovie extends Component {
   }
 }
 
-JumboMovie.propTypes = {
+Billboard.propTypes = {
   movie: PropTypes.object.isRequired,
 };
 
-export default JumboMovie;
+export default Billboard;
