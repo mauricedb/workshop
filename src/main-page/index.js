@@ -1,15 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import Header from './header';
-import Movies from './movies';
+import Billboard from './billboard';
+import GenreList from './genre-list';
 
 class MainPage extends Component {
   render() {
-    const { user, startPlaying } = this.props;
+    const { user, movies, startPlaying } = this.props;
 
     return (
       <div>
         <Header user={user} />
-        <Movies startPlaying={startPlaying} />
+        <Billboard movie={movies[0]} />
+        <GenreList movies={movies} startPlaying={startPlaying} />
       </div>
     );
   }
@@ -17,6 +19,7 @@ class MainPage extends Component {
 
 MainPage.propTypes = {
   user: PropTypes.object.isRequired,
+  movies: PropTypes.array.isRequired,
   startPlaying: PropTypes.func.isRequired,
 };
 

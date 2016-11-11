@@ -97,3 +97,4 @@ create  .eslintrc
     "extends": "airbnb"
 Open package.json
     Add `"eslint": "eslint ./src/**/*.js"` to the `scripts` section
+    
