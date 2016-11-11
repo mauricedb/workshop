@@ -7,7 +7,6 @@
         "linebreak-style": "off",
         "react/jsx-filename-extension": "off",
         "react/forbid-prop-types": "off",
-        "react/no-multi-comp": "off",
         "react/prefer-stateless-function": "off"
     }
 }
