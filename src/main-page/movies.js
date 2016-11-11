@@ -41,13 +41,11 @@ export class MoviesContainer extends Component {
     const { startPlaying } = this.props;
     const { movies } = this.state;
 
-    return (
-      <div>
-        {movies
-                    ? <MoviesPresentation movies={movies} startPlaying={startPlaying} />
-                    : <AjaxLoading />}
-      </div>
-    );
+    if (!movies) {
+      return <AjaxLoading />;
+    }
+
+    return <MoviesPresentation movies={movies} startPlaying={startPlaying} />;
   }
 }
 

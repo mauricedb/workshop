@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginPage from './login-page';
+import PlayingMovie from './playing-movie';
 import MainPage from './main-page';
 
 class App extends Component {
@@ -8,11 +9,12 @@ class App extends Component {
 
     this.state = {
       user: null,
+      playing: null,
     };
 
-    this.loginAsUser = this
-      .loginAsUser
-      .bind(this);
+    this.loginAsUser = this.loginAsUser.bind(this);
+    this.startPlaying = this.startPlaying.bind(this);
+    this.stopPlaying = this.stopPlaying.bind(this);
   }
 
   componentWillMount() {
@@ -27,6 +29,14 @@ class App extends Component {
     }
   }
 
+  startPlaying(movie) {
+    this.setState({ playing: movie });
+  }
+
+  stopPlaying() {
+    this.setState({ playing: null });
+  }
+
   loginAsUser(user) {
     if (user.rememberMe) {
       localStorage.user = JSON.stringify(user);
@@ -35,13 +45,20 @@ class App extends Component {
   }
 
   render() {
-    const { user } = this.state;
+    const { user, playing } = this.state;
+    let component = null;
+
+    if (!user) {
+      component = <LoginPage loginAsUser={this.loginAsUser} />;
+    } else if (playing) {
+      component = <PlayingMovie movie={playing} stopPlaying={this.stopPlaying} />;
+    } else {
+      component = <MainPage user={user} startPlaying={this.startPlaying} />;
+    }
 
     return (
       <div className="container">
-        {this.state.user
-          ? <MainPage user={user} />
-          : <LoginPage loginAsUser={this.loginAsUser} />}
+        {component}
       </div>
     );
   }
