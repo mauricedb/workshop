@@ -3,5 +3,4 @@ import ReactDOM from 'react-dom';
 import App from './app-component';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(
-  <App />, document.getElementById('root'));
+ReactDOM.render(React.createElement(App), document.getElementById('root'));
