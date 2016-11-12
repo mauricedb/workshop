@@ -1,28 +1,22 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
-class Header extends Component {
-  render() {
-    const { user } = this.props;
+const Header = ({ user }) => (
+  <nav className="navbar navbar-default">
+    <div className="container-fluid">
+      <div className="navbar-header">
+        <a className="navbar-brand" href="/">
+          Nitflex Movies
+        </a>
+      </div>
 
-    return (
-      <nav className="navbar navbar-default">
-        <div className="container-fluid">
-          <div className="navbar-header">
-            <a className="navbar-brand" href="/">
-                            Nitflex Movies
-                        </a>
-          </div>
-
-          <div className="navbar-right">
-            <p className="navbar-text">
-              {user.name}
-            </p>
-          </div>
-        </div>
-      </nav>
-    );
-  }
-}
+      <div className="navbar-right">
+        <p className="navbar-text">
+          {user.name}
+        </p>
+      </div>
+    </div>
+  </nav>
+);
 
 Header.propTypes = {
   user: PropTypes
