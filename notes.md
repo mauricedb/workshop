@@ -46,7 +46,7 @@
     1. In `componentDidMount()` check `localStorage` for user and set if there. 
 1. Create a `Header` component and render this in the MainPage
     1. Pass the `user` so we can display the name.
-1. Add a `movies.js`
+1. Niet meer hier: Add a `movies.js`
     1. Create two components `MoviesContainer` and `MoviesPresentation`.
     1. `MoviesContainer` does and AJAX request and renders `MoviesPresentation` after movies have loaded
     1. Add `AjaxLoading` indicator to show before the movies AJAX request is done.

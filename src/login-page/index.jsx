@@ -10,18 +10,10 @@ class LoginPage extends Component {
       rememberMe: false,
     };
 
-    this.onNameChange = this
-      .onNameChange
-      .bind(this);
-    this.onPasswordChange = this
-      .onPasswordChange
-      .bind(this);
-    this.onRememberMeChange = this
-      .onRememberMeChange
-      .bind(this);
-    this.login = this
-      .login
-      .bind(this);
+    this.onNameChange = this.onNameChange.bind(this);
+    this.onPasswordChange = this.onPasswordChange.bind(this);
+    this.onRememberMeChange = this.onRememberMeChange.bind(this);
+    this.login = this.login.bind(this);
   }
 
   onNameChange(e) {

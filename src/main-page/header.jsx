@@ -19,10 +19,7 @@ const Header = ({ user }) => (
 );
 
 Header.propTypes = {
-  user: PropTypes
-        .shape({ name: React.PropTypes.string })
-        .isRequired,
-
+  user: PropTypes.shape({ name: React.PropTypes.string }).isRequired,
 };
 
 export default Header;
