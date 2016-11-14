@@ -8,12 +8,14 @@ class AppContainer extends Component {
     this.state = {
       user: null,
       playing: null,
-      movies: null,
+      allMovies: null,
+      filteredMovies: null,
     };
 
     this.loginAsUser = this.loginAsUser.bind(this);
     this.startPlaying = this.startPlaying.bind(this);
     this.stopPlaying = this.stopPlaying.bind(this);
+    this.filterMovies = this.filterMovies.bind(this);
   }
 
   componentWillMount() {
@@ -32,7 +34,7 @@ class AppContainer extends Component {
   fetchMovies() {
     fetch('/movies.json')
       .then(rsp => rsp.json())
-      .then(movies => this.setState({ movies }));
+      .then(movies => this.setState({ allMovies: movies }));
   }
 
   startPlaying(movie) {
@@ -51,17 +53,34 @@ class AppContainer extends Component {
     this.fetchMovies();
   }
 
+  filterMovies(search) {
+    let filteredMovies = null;
+
+    if (search) {
+      const searchLower = search.toLowerCase();
+      const { allMovies } = this.state;
+      filteredMovies = allMovies.filter(m => m.title.toLowerCase().indexOf(searchLower) !== -1);
+
+      if (!filteredMovies.length) {
+        filteredMovies = null;
+      }
+    }
+
+    this.setState({ filteredMovies });
+  }
+
   render() {
-    const { user, movies, playing } = this.state;
+    const { user, allMovies, filteredMovies, playing } = this.state;
 
     return (
       <AppPresentation
         user={user}
-        movies={movies}
+        movies={filteredMovies || allMovies}
         playing={playing}
         loginAsUser={this.loginAsUser}
         startPlaying={this.startPlaying}
         stopPlaying={this.stopPlaying}
+        filterMovies={this.filterMovies}
       />
     );
   }

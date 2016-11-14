@@ -4,7 +4,7 @@ import PlayingMovie from './playing-movie';
 import MainPage from './main-page';
 import AjaxLoading from './utils/ajax-loading';
 
-const AppPresentation = ({ user, movies, playing, loginAsUser, startPlaying, stopPlaying }) => {
+const AppPresentation = ({ user, movies, playing, loginAsUser, startPlaying, stopPlaying, filterMovies }) => {
   let component = null;
 
   if (!user) {
@@ -14,7 +14,7 @@ const AppPresentation = ({ user, movies, playing, loginAsUser, startPlaying, sto
   } else if (playing) {
     component = <PlayingMovie movie={playing} stopPlaying={stopPlaying} />;
   } else {
-    component = <MainPage user={user} movies={movies} startPlaying={startPlaying} />;
+    component = <MainPage user={user} movies={movies} startPlaying={startPlaying} filterMovies={filterMovies} />;
   }
 
   return (
@@ -31,6 +31,7 @@ AppPresentation.propTypes = {
   loginAsUser: PropTypes.func.isRequired,
   startPlaying: PropTypes.func.isRequired,
   stopPlaying: PropTypes.func.isRequired,
+  filterMovies: PropTypes.func.isRequired,
 };
 
 export default AppPresentation;

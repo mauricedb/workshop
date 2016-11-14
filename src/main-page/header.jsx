@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
+import FilterMovies from './filter-movies';
 
-const Header = ({ user }) => (
+const Header = ({ user, filterMovies }) => (
   <nav className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
@@ -14,26 +15,16 @@ const Header = ({ user }) => (
           {user.name}
         </p>
       </div>
+      <FilterMovies filterMovies={filterMovies} />
     </div>
   </nav>
 );
 
 Header.propTypes = {
   user: PropTypes.shape({ name: React.PropTypes.string }).isRequired,
+  filterMovies: PropTypes.func.isRequired,
 };
 
 export default Header;
 
 
-            // <form className="navbar-form navbar-right">
-            //     <div className="input-group">
-            //         <input type="text"
-            //                className="form-control"
-            //                placeholder="Search" />
-            //         <span className="input-group-btn">
-            //             <button className="btn btn-default">
-            //                 <i className="glyphicon glyphicon-search" />
-            //             </button>
-            //         </span>
-            //     </div>
-            // </form>
